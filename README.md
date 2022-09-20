@@ -34,3 +34,15 @@ Injector.register('roleService', roleService)
     console.log(role())
   })
 ```
+
+## V2.0
+
+将兼容以下写法：
+
+```JavaScript
+
+injector.resolve(function(service, other, router) {
+
+})
+
+```
