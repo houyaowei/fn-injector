@@ -12,8 +12,12 @@ let deps = new Map();
 
 const Injector = {
   dependences: deps,
-  register:function (k,v) {
-    this.dependences.set(k,v)
+  register:function (k,v, callback) {
+    if( callback ) {
+      this.dependences.set(k,callback)
+    } else {
+      this.dependences.set(k,v)
+    }
   },
   resolve: function (_deps, _func,_scope) {
     let args = [];
