@@ -1,4 +1,4 @@
-import  Injector  from "..src/index.js";
+import  Injector  from "../src/index.js";
 
 var nameService = function() {
   return { name: 'nameService' };
